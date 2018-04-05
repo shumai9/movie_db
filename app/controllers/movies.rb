@@ -7,8 +7,11 @@ MovieDb::App.controllers :movies do
   
   get :index, :with => :id do
     @movie = Movie.find(params[:id])
-    @movie.title
+    @title = @movie.title
+    @genres = @movie.genres
+    render 'movie'
   end
+
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'

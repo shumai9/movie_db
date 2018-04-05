@@ -9,7 +9,7 @@
 <h1>Top 5 Movies</h1>
 <ul>
   <% @movies.each do |movie| %>
-    <li><%= movie.title %> - <%= movie.year %></li>
+    <li><a href="/movies/<%= movie.id %>"> <%= movie.title %> - <%= movie.year %> </a></li>
   <% end %>
 </ul>
 </body>
