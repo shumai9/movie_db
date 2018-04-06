@@ -6,11 +6,10 @@
   <!--link rel="stylesheet" href="css/style.css"-->
 </head>
 <body>
-<h1><%= @title %></h1>
-<h3>Genres</h3>
+<h1><%= @name %></h1>
 <ul>
-  <% @genres.each do |genre| %>
-    <li><a href="/genres/<%= genre.id %>"><%= genre.name %></a></li>
+  <% @movies.each do |movie| %>
+    <li><a href="/movies/<%= movie.id %>"> <%= movie.title %></a></li>
   <% end %>
 </ul>
 </body>
